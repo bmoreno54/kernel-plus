@@ -21,13 +21,15 @@ Full bootstrap instructions in `CLAUDE.md`.
 ## Structure
 
 ```
+KERNEL.md        # canonical agent instructions (read this first)
+alpha_entity.md  # you (the sovereign origin)
 kernel/          # foundational positions
   node.md        # sovereignty
   relation.md    # intersubjectivity  
   provenance.md  # deterministic traceability
   node_schema.md # molecular composition
   schema.md      # emergent graph vocabulary
-trunk/           # operational protocols
+trunk/           # operational protocols (9 protocols)
   fade.md        # ingestion airlock
   noise_floor.md # non-destructive data hygiene
   procedural_memory.md  # learning from friction
@@ -35,9 +37,15 @@ trunk/           # operational protocols
   contextual_providence.md  # cross-pollination
   omnibus.md     # tag-based coordination
   opportunistic_separation.md  # project crystallization
-alpha_entity.md  # you (the sovereign origin)
-CLAUDE.md        # agent instructions + self-maintenance
+  sovereignty_posture.md  # defensive/extractive/assertive
+  virtue_journey.md  # continuous situated discernment
+notes/           # process documentation
+CLAUDE.md        # Claude Code adapter (points to KERNEL.md)
 ```
+
+## Agent Independence
+
+KERNEL.md is the canonical instruction surface. Platform-specific files (CLAUDE.md, .cursorrules, .windsurfrules, etc.) are adapter emanations. The kernel works with any agent that can read markdown. See `notes/agent_adapters.md` for the full survey.
 
 ## Kernel+Extensions
 
