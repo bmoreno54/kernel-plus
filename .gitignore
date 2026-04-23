@@ -1,0 +1,6 @@
+.env
+*.credentials
+*.secret
+.DS_Store
+Thumbs.db
+desktop.ini
