@@ -28,6 +28,16 @@ Replace with:
 - Mathematical convergence without coordination (CRDTs)
 - Stigmergic signals read at encounter time
 
+## Situated Derivation
+
+Cold computation composes with occlusion rendering and the fountain principle into a single commitment: **situated derivation**. The ecology does not maintain a representation of itself. It renders a picture from wherever the human is standing, at the moment they arrive, through the medium of their engagement.
+
+- Cold computation governs **state**: derive at runtime, don't maintain warm copies.
+- Occlusion rendering governs **perception**: render from topology at encounter time, don't maintain a warm map.
+- The fountain principle governs **production**: let products emerge from substrate at use time, don't maintain warm products.
+
+These are the same mechanism across three registers. What cold computation does to state, occlusion does to perception, and fountain does to production. Promoting any one without the others is incomplete: cold computation alone is a performance optimization; occlusion alone is a UX pattern; fountain alone is a platitude. Together they constitute the ecology's rendering paradigm.
+
 ## The Minimum Warm Surface
 
 Some systems require a warm listener to catch the human's first gesture (e.g., a hotkey daemon on Windows). This is the irreducible warm surface — everything after the first gesture should be cold.

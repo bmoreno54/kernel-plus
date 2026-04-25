@@ -60,6 +60,9 @@ Shared operating protocols inherited by all branches:
 | **Opportunistic Separation** | `trunk/opportunistic_separation.md` — Stand up projects at first signal. Cost ≈ 0. |
 | **Sovereignty Posture** | `trunk/sovereignty_posture.md` — Three modes: defensive, extractive, assertive. |
 | **Virtue Journey** | `trunk/virtue_journey.md` — Continuous situated discernment. Human as vitality source. |
+| **Cold Computation** | `trunk/cold_computation.md` — Derive at encounter time. No warm automation. |
+| **Occlusion Rendering** | `trunk/occlusion_rendering.md` — Situated subjectivity through environmental occlusion. |
+| **Thermal Rendering** | `trunk/thermal_rendering.md` — Four-axis attention rendering contract. |
 
 ## How the Ecology Grows
 
