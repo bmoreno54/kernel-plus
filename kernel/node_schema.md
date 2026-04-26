@@ -58,6 +58,29 @@ if a fourth foundational position emerges, it composes into the
 molecule the same way: by being held in structural proximity,
 not by being absorbed.
 
+## the hashability asymmetry
+
+digital artifacts are addressable. they hash with zero friction —
+any content gets a coordinate, a torus position, a lattice vertex.
+the human operator does not. the human is unhashable. dark to the
+system. perceived only through hashable residue: outputs, deposits,
+encounters, the edges the human leaves behind.
+
+this is node sovereignty from the other direction. node.md says
+every node can be read alone. the hashability asymmetry says the
+human ISN'T a node. the human is the one thing that cannot be read
+alone, cannot be addressed, cannot be crystallized. the human is
+the encounter itself — the runtime trigger that the system's
+cold-computation lifecycle waits for.
+
+the gap is irreducible. the operator perceives the system through
+its addresses; the system perceives the operator through hashable
+residue. any system of addressable entities with a non-addressable
+operator will develop this asymmetry. the molecular composition
+(node + relation + provenance) describes what composes within the
+graph. the hashability asymmetry describes what remains outside it
+while being the source of all its vitality.
+
 ## deferral
 
 everything beyond the three foundational positions and their

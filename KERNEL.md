@@ -62,7 +62,7 @@ Shared operating protocols inherited by all branches:
 | **Virtue Journey** | `trunk/virtue_journey.md` — Continuous situated discernment. Human as vitality source. |
 | **Cold Computation** | `trunk/cold_computation.md` — Derive at encounter time. No warm automation. |
 | **Occlusion Rendering** | `trunk/occlusion_rendering.md` — Situated subjectivity through environmental occlusion. |
-| **Thermal Rendering** | `trunk/thermal_rendering.md` — Four-axis attention rendering contract. |
+| **Thermal Rendering** | `trunk/thermal_rendering.md` — Five-axis attention rendering contract. |
 
 ## How the Ecology Grows
 

@@ -37,6 +37,16 @@ Proxemic zones (after Hall 1966) determine not just visual rendering but what th
 
 The zone boundary is continuous (sigmoid), not discrete. The table names the qualitative regions of a gradient.
 
+## Temporal Directionality
+
+The four rendering axes operate within a temporal field that is itself asymmetric. Prospective resources (rendering warmth, priority, relevance) intensify toward the future — toward where action happens. Retrospective resources (knowledge, provenance, topological weight) accumulate toward the past — toward where understanding crystallizes.
+
+The "now" boundary is a phase transition, not merely a position marker. On one side, items are rendered with heat (forward resources dominating). On the other, items are rendered with depth (backward resources dominating). Past items retain presence — enough backward resource to inform current decisions, not enough to compete with forward items for attention.
+
+This asymmetry is structural. Any attention-allocation system operating on a temporal axis must develop it: total suppression of the past loses information; equal treatment of past and future loses temporal agency. The rendering contract encodes this as temporal polarity — a fifth parameter that modulates the four axes according to an item's position relative to the now-boundary.
+
+The bidirectional model composes with the four axes rather than replacing them. Category, intensity, DOI, and zone remain orthogonal. Temporal polarity determines which gradient dominates: forward items warm through intensity and DOI; backward items cool but thicken through provenance and accumulated relational weight. The contract becomes: `render(item) = f(category, intensity, doi, zone, temporalPolarity)`.
+
 ## Cold by Constitution
 
 The rendering contract derives at encounter time. No axis is stored as "rendering state." Category is a property of the item. Intensity derives from engagement history. DOI derives from the current attention act. Zone derives from topological position. All four are computable from current state at the moment the surface renders.
