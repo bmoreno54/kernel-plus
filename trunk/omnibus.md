@@ -1,7 +1,6 @@
 # Omnibus Tag Substrate — Emergent Semantic Coordination
 
-> **scope:** trunk — inherited by all branches
-> **status:** active
+> **scope:** trunk — inherited by all branches **status:** active
 
 ## What the Omnibus Is
 
@@ -20,14 +19,17 @@ Folder structure remains useful as a spatial metaphor for human browsing. But th
 ## The Tag Taxonomy
 
 ### Universal Signal
+
 - `#omnibus` — meta-tag signaling "this belongs in the substrate." A breadcrumb. Appears in any file, any note, any comment.
 
 ### Density Layer Tags (Penumbra Pattern)
+
 - `#card` — state snapshot, 10-30 lines, answers "what's the situation?"
 - `#grip` — configuration surface, tuning lever, point where intention grabs the system
 - `#deep` — full reference, engage only when penumbra doesn't resolve
 
 ### Semantic Role Tags
+
 - `#research` — exploratory, may change, not yet actionable
 - `#infrastructure` — operational, supports the project's own processes
 - `#library` — archived for study, not for active build
@@ -36,6 +38,7 @@ Folder structure remains useful as a spatial metaphor for human browsing. But th
 - `#decision` — a choice point that gates downstream work
 
 ### Momentum Tags
+
 - `#blocked` — can't activate until something else resolves
 - `#tested` — confirmed working by direct observation
 - `#untested` — theorized but not verified
@@ -82,6 +85,7 @@ Tag clusters reveal implicit organizational forces — basins in the project's p
 When you notice that multiple unrelated discoveries cluster around a shared property, that clustering IS the dark pattern. Name it. Track it. But don't flatten it into a rigid category — an attractor is a tendency, not a rule.
 
 Additional meta-tags for attractor tracking:
+
 - `#attractor` — marks a concept functioning as a basin of attraction
 - `#nucleation` — marks a document that crystallized from penumbral accretion
 - `#dark` — marks an inferred pattern not yet explicit in any single document

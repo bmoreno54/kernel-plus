@@ -47,6 +47,24 @@ This asymmetry is structural. Any attention-allocation system operating on a tem
 
 The bidirectional model composes with the four axes rather than replacing them. Category, intensity, DOI, and zone remain orthogonal. Temporal polarity determines which gradient dominates: forward items warm through intensity and DOI; backward items cool but thicken through provenance and accumulated relational weight. The contract becomes: `render(item) = f(category, intensity, doi, zone, temporalPolarity)`.
 
+## Property Inclusion — The Discontinuous Layer
+
+The four rendering axes govern *how* visible properties render — scale, opacity, color, position. But zone boundaries also gate *which* properties are visible at all. This is a phase transition in the contract's architecture.
+
+A system that only varies rendering intensity is continuous — everything present, scaled. A system that varies property inclusion is discontinuous — properties appear and disappear at zone boundaries. The zone boundaries become phase transitions where the information topology changes, not just the information density.
+
+This is information-theoretic necessity, not design choice. A system that only scales faces an information density floor: at sufficient distance, even minimal rendering carries more information than the observer can metabolize. The response is to drop properties entirely — the same reason LOD (Level of Detail) systems switch meshes rather than scaling vertices. Continuous degradation hits a floor where discrete simplification is the only path. The attribute set IS the information-theoretic LOD.
+
+The rendering contract is therefore a three-layer system:
+
+1. **Data preparation** — recurrence compression, rhythm detection (entity-level gating: repeated entities lose individual identity, replaced by aggregate rhythm)
+2. **Property inclusion** — attribute sets (property-level gating at zone boundaries: which properties exist in the output)
+3. **Visual rendering** — the four-axis thermal contract (continuous scaling within included properties)
+
+Each layer was independently discovered across multiple surfaces. No layer designed the others. The ecology grew this stack from the bottom up. The attribute set composes with pace entrainment: fewer properties at distant zones create the conditions for faster scanning rhythm — property inclusion gates WHAT; pace entrainment gates WHEN.
+
+The counter-test: could a system avoid property gating entirely? Only if all properties are equally important at all distances — which holds only for homogeneous entities. The moment entities are heterogeneous (which they always are in practice), properties have different information value at different distances, and gating becomes necessary because the observation budget is finite.
+
 ## Cold by Constitution
 
 The rendering contract derives at encounter time. No axis is stored as "rendering state." Category is a property of the item. Intensity derives from engagement history. DOI derives from the current attention act. Zone derives from topological position. All four are computable from current state at the moment the surface renders.

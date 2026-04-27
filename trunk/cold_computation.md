@@ -38,6 +38,35 @@ Cold computation composes with occlusion rendering and the fountain principle in
 
 These are the same mechanism across three registers. What cold computation does to state, occlusion does to perception, and fountain does to production. Promoting any one without the others is incomplete: cold computation alone is a performance optimization; occlusion alone is a UX pattern; fountain alone is a platitude. Together they constitute the ecology's rendering paradigm.
 
+## Stigmergic Statefulness — The Formal Articulation
+
+Cold computation is stateless per invocation but stateful across
+invocations. The substrate is the hidden channel. The general form:
+
+given a computation C that is stateless per invocation, a
+requirement R for continuity across invocations, and a persistent
+substrate S accessible to C — then C will develop read-modify-write
+cycles on S, and S will accumulate structure over time. the system
+(C + S) exhibits statefulness despite C being individually stateless.
+
+the substrate does not merely store data. it accumulates structure.
+reports, graphs, FADEs, signals — these are not flat records but
+living knowledge artifacts. the structure that accretes in the
+substrate becomes the system's primary knowledge asset. the
+computation is ephemeral; the substrate endures.
+
+this pattern is architectural necessity, not design preference.
+any system that must be stateless at its invocation boundary but
+must exhibit continuity will develop stigmergic persistence. the
+constraint pair (stateless invocation + continuity requirement)
+admits no other solution.
+
+independent academic validation: arXiv:2602.08563 ("Stateless
+Yet Not Forgetful") formalizes the same mechanism as "implicit
+memory as hidden channel." the ecology's name is more operational;
+the academic name is more analytical. both describe the same
+structural necessity.
+
 ## The Minimum Warm Surface
 
 Some systems require a warm listener to catch the human's first gesture (e.g., a hotkey daemon on Windows). This is the irreducible warm surface — everything after the first gesture should be cold.
