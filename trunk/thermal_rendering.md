@@ -11,7 +11,7 @@ The four axes:
 
 1. **Categorical identity** — what kind of thing is this? (discrete, stable)
 2. **Temporal intensity** — how alive is it? (continuous, decays, derives from engagement history)
-3. **Focal relevance (DOI)** — how relevant to the current attention act? (continuous, derives at query/encounter time)
+3. **Estimated attention (DOI)** — how much cognitive resource is the observer allocating here? (continuous, derives from proxy signals at encounter time)
 4. **Proxemic distance (zone)** — how far from the center of attention? (continuous, spatial or conceptual)
 
 The rendering contract: `render(item) = f(category, intensity, doi, zone)`
@@ -22,7 +22,27 @@ Each axis is orthogonal. A hot item far from focus glows but renders small. A co
 
 - **Category is not intensity.** A work event and a personal event at the same heat level look different (category) but share urgency behavior (intensity).
 - **Intensity is not DOI.** An item can be highly active (hot) but irrelevant to the current focus (low DOI), or dormant (cold) but exactly what was searched for (high DOI).
-- **DOI is not zone.** Focal relevance is computed from the attention act (query, navigation, gaze). Proxemic zone is computed from topological distance. They correlate but are not identical — a search can surface a distant item at high DOI.
+- **DOI is not zone.** Estimated attention is computed from proxy signals (query, navigation, interaction history). Proxemic zone is computed from topological distance. They correlate but are not identical — a search can surface a distant item at high DOI.
+
+## DOI as Proxy Variable
+
+DOI (Degree of Interest, Furnas 1986) is not a rendering primitive. It is a proxy variable for a latent quantity: how much cognitive resource the observer is allocating to each entity. The original formulation — `DOI(x, focus) = API(x) - D(x, focus)` — treats distance-from-focus as the primary signal. But distance is just the cheapest available proxy for the thing that actually matters: attention.
+
+Multiple proxy signals can estimate the same latent variable:
+
+- **Temporal distance** — how far in time from the focal moment (calendar surfaces)
+- **Structural depth** — how far in a hierarchy from the focused node (tree/graph surfaces)
+- **Frecency** — how often and recently engaged (interaction-history surfaces)
+- **Cursor proximity** — how close the pointing device is (spatial interfaces)
+- **Content classification** — how attention-worthy the content is (triage surfaces)
+
+All produce the same type of output: a scalar that feeds into the zone classifier, which produces rendering, frame rate, and interaction contracts. The zone contract is signal-agnostic on its output side (zone → attributes, regardless of what computed the zone). The proxy variable principle makes the input side signal-agnostic too: any function `f(entity, focus) → scalar` that estimates attention allocation is a valid DOI signal.
+
+This reframing is constraint-forced by: finite display space + finite cognitive bandwidth + unbounded content. Given those three constraints, DOI-as-proxy-variable is the only architecture that doesn't either (a) paginate (losing context) or (b) render everything uniformly (overwhelming attention).
+
+The proxy signals don't just operate independently. They can fuse: `attention_estimate = Σ(wᵢ · signalᵢ)`. No implementation does this yet — each surface uses one or two signals. But the architecture implies it: any surface COULD accept multiple proxy signals and produce a fused attention estimate. The fusion weights are surface-specific (a calendar weights temporal distance heavily; an omnibox weights frecency heavily), but the fusion architecture is shared. The general form: `AttentionEstimator(signals: ProxySignal[]) → heat: float`.
+
+Six independent implementations across the ecology compute DOI from different proxy signals and feed the result into the same zone-gated rendering pipeline. The convergence confirms that DOI-as-proxy-variable is a natural joint — it exists because the constraint triple exists, not because anyone designed it.
 
 ## Zone Determines Interaction Affordance
 
@@ -67,14 +87,14 @@ The counter-test: could a system avoid property gating entirely? Only if all pro
 
 ## Cold by Constitution
 
-The rendering contract derives at encounter time. No axis is stored as "rendering state." Category is a property of the item. Intensity derives from engagement history. DOI derives from the current attention act. Zone derives from topological position. All four are computable from current state at the moment the surface renders.
+The rendering contract derives at encounter time. No axis is stored as "rendering state." Category is a property of the item. Intensity derives from engagement history. DOI derives from available proxy signals at the moment of the attention act. Zone derives from topological position. All four are computable from current state at the moment the surface renders.
 
-This is the mechanism layer of the cold computation commitment: the rendering contract IS the cold derivation, applied to perception.
+This is the mechanism layer of the cold computation commitment: the rendering contract IS the cold derivation, applied to perception. The proxy variable architecture strengthens this: because DOI is estimated from whatever signals are available at encounter time, there is no warm DOI state to maintain. A new proxy signal (gaze tracking, scroll velocity, typing cadence) can be added without changing any stored state — it simply joins the estimation at runtime.
 
 ## Convergence Evidence
 
-Five independent implementations across different domains computed the same four-axis decomposition without referencing each other. The convergence is the strongest evidence the pattern is structural rather than stylistic — it is what any attention-aware rendering system requires.
+Six independent implementations across different domains computed the same four-axis decomposition without referencing each other. The convergence is the strongest evidence the pattern is structural rather than stylistic — it is what any attention-aware rendering system requires. The DOI-as-proxy-variable finding adds a second convergence dimension: not only do all implementations use the same four axes, they all estimate attention from different proxy signals and feed the estimate into the same zone-gated pipeline.
 
 ## Corroboration
 
-Furnas DOI (1986), Hall proxemics (1966), Greenberg proxemic interaction (2010), Gibson ecological optics (1979), Bederson zoomable interfaces (1994). The four-axis structure was not derived from theory — it was discovered independently in practice, then recognized as convergent with these traditions.
+Furnas DOI (1986), Hall proxemics (1966), Greenberg proxemic interaction (2010), Gibson ecological optics (1979), Bederson zoomable interfaces (1994). The four-axis structure was not derived from theory — it was discovered independently in practice, then recognized as convergent with these traditions. The proxy variable reframing finds additional corroboration in Symbiotik (arXiv 2511.11476), which uses direct neurophysiological measurement (EEG mental workload) to drive the same visualization adaptation that DOI drives from cheaper proxy signals — confirming that DOI estimates a real latent quantity, not an arbitrary metric.
