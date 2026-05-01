@@ -67,6 +67,48 @@ memory as hidden channel." the ecology's name is more operational;
 the academic name is more analytical. both describe the same
 structural necessity.
 
+## The Clearing Protocol — Procedural Face of Cold Compute
+
+Stigmergic statefulness is the mechanism. The clearing protocol is
+the procedure it produces when facing accumulation surfaces.
+
+Any agent that is stateless per invocation but must process material
+that accumulates between invocations will develop a five-phase
+clearing protocol:
+
+1. **Pull** — gather what has accumulated since last clearing
+2. **Triage** — separate by action-type (not by content-type)
+3. **Route** — deposit extracted signal into appropriate receiving systems
+4. **Clear** — return the accumulation surface to empty
+5. **Learn** — update the triage model from what was encountered
+
+This protocol is constraint-forced by a triple:
+
+- **Finite attention** — the agent cannot process everything continuously
+- **Unbounded accumulation** — material arrives whether or not the agent processes it
+- **Heterogeneous content** — not all accumulated material has the same action-type
+
+The constraint triple admits no other viable architecture. Continuous
+monitoring fails at scale. Batch processing without triage fails at
+heterogeneity. The five phases are the minimal complete response.
+
+The clearing protocol composes with cold compute at every joint:
+clearing runs as stateless invocation (cold), and the Learn phase
+deposits its results stigmergically (substrate enrichment) for the
+next invocation to discover. It composes with property inclusion
+(thermal rendering): triage IS entity-level attribute-set gating —
+which accumulated items earn attention. It composes with the
+three-layer rendering stack: pull is data preparation, triage is
+property inclusion, route/clear is rendering.
+
+Five independent implementations discovered this protocol without
+shared code or mutual reference: email/life clearing (switchboard),
+ecology graph churning (shadow mapper), research/session processing
+(hearth), calendar event rendering (OMA), and command/query
+processing (omnibox). The convergence across five unrelated domains
+confirms the protocol is a natural joint — it exists because the
+constraint triple exists, not because anyone designed it.
+
 ## The Minimum Warm Surface
 
 Some systems require a warm listener to catch the human's first gesture (e.g., a hotkey daemon on Windows). This is the irreducible warm surface — everything after the first gesture should be cold.
